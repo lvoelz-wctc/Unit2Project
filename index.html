@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Our styles -->
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<p>Enter a four-digit number with no duplicated digits. For example, "6329" is valid, while "6323" is not.</p>
+<form id="number_form">
+    <label for = "guess_number" class="address_form">Number</label>
+    <input type="text" class="address_input" name="guess_number" id="guess_number" data-delivery="number"/>
+
+    <button id="submit_number">Submit Number</button>
+    <button id="show_number">Show Number</button>
+</form>
+
+<p id = "result"></p>
+<p id="showNumber"></p>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!-- Popper and Bootstrap second -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Our code last -->
+<script src="code.js"></script>
+</body>
+</html>
