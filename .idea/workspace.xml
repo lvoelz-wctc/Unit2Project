@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe65e505-b87c-40aa-af65-50cdddb2ba00" name="Default Changelist" comment="Finalized logic.">
+    <list default="true" id="fe65e505-b87c-40aa-af65-50cdddb2ba00" name="Default Changelist" comment="Validation Logic - Error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/code.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +63,7 @@
       <workItem from="1605850850337" duration="456000" />
       <workItem from="1606089426160" duration="3026000" />
       <workItem from="1606096619560" duration="2687000" />
-      <workItem from="1606182562038" duration="9832000" />
+      <workItem from="1606182562038" duration="13042000" />
     </task>
     <task id="LOCAL-00001" summary="Finalized logic.">
       <created>1606191266429</created>
@@ -73,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606191266429</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Validation Logic - Error">
+      <created>1606192579431</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606192579431</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,7 +98,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finalized logic." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalized logic." />
+    <MESSAGE value="Validation Logic - Error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Validation Logic - Error" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1059" y="439" key="Github.ShareDialog" timestamp="1606097095806">
@@ -103,9 +110,9 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1149" y="246" key="Github.UntrackedFilesDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606097101297" />
-    <state x="-1398" y="274" key="Vcs.Push.Dialog.v2" timestamp="1606191269068">
+    <state x="-1398" y="274" key="Vcs.Push.Dialog.v2" timestamp="1606192583239">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1398" y="274" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606191269068" />
+    <state x="-1398" y="274" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606192583239" />
   </component>
 </project>

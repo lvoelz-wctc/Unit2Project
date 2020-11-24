@@ -2,6 +2,7 @@ $(document).ready(
     function () {
         $("#submit_number").click(submitNumber);
         $("#show_number").click(showNumber);
+        $("form").submit(submitNumber);
 
         //validations
         var myRules = {
@@ -50,7 +51,6 @@ $(document).ready(
 
         function submitNumber() {
             //call validation
-            $("form").submit(submitNumber);
             var guess = $("#guess_number").val().toString();
             var wrong = 0;
 
