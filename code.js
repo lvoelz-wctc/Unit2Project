@@ -3,6 +3,36 @@ $(document).ready(
         $("#submit_number").click(submitNumber);
         $("#show_number").click(showNumber);
 
+        //validations
+        var myRules = {
+            guess:
+                {
+                    required: true,
+                    digits: true,
+                    minLength: 4,
+                    maxLength: 4
+                }
+        }
+
+        var myMessages = {
+            guess:
+                {
+                    required: "Enter a four digit number.",
+                    digits: "Entry must be a number.",
+                    minLength: "Must be exactly four digits.",
+                    maxLength: "Must be exactly four digits."
+                }
+        }
+
+        $("form").validate(
+            {
+                submitHandler: submitNumber,
+                rules: myRules,
+                messages: myMessages,
+            }
+        );
+
+        //generate computer number
         var compNum = Math.floor((Math.random() * 10)).toString();
         for (var x = 0; x <= 2; x++) {
             var testNum = Math.floor((Math.random() * 10)).toString();
@@ -18,8 +48,9 @@ $(document).ready(
         var cowCount = 0; //different position only
         var totalCount = 0;
 
-        function submitNumber(event) {
-            event.preventDefault();
+        function submitNumber() {
+            //call validation
+            $("form").submit(submitNumber);
             var guess = $("#guess_number").val().toString();
             var wrong = 0;
 
