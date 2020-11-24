@@ -11,53 +11,61 @@ $(document).ready(
             } else {
                 x--;
             }
-            var finalNum = parseInt(compNum);
-
-            //iterable numbers need to stay outside function since we will probably call it multiple times
-            //since this is only on page load, they won't reset to 0?
-            //pull guess number from html
-            var guess = parseInt($("#guess_number").val());
-
-            var bullCount = 0; //same position only
-            var cowCount = 0; //different position only
-            var totalCount = 0;
-
-    function submitNumber(event) {
-        event.preventDefault();
-        //if loop runs every time function is called, so we probably don't need a do while loop?
-        if (guess === finalNum){
-            totalCount++;
-            $("#result").text("You win! Guesses needed: " + totalcount);
         }
 
-        else {
-            //test against each number
-            for (var x=0; x<=3; x++){
-                if (guess[x] === finalNum[x]){
-                    bullCount++;
-                }
-                else if (guess[x] === finalNum[x+1]){
-                    cowCount++;
-                }
-                else if (guessNum1 === finalNum[x+2]){
-                    cowCount++;
-                }
-                else if (guessNum1 === finalNum[x+3]){
-                    cowCount++;
+        var finalNum = compNum.toString();
+        var bullCount = 0; //same position only
+        var cowCount = 0; //different position only
+        var totalCount = 0;
+
+        function submitNumber(event) {
+            event.preventDefault();
+            var guess = $("#guess_number").val().toString();
+            var wrong = 0;
+
+            //make sure the guess doesn't have any repeated numbers
+            for (var z = 0; z<=3; z++){
+                if (guess[z] === guess[z+1]){
+                    $("#result").show();
+                    $("#result").text("Guess may not contain duplicate numbers. Try again.");
+                    wrong = 1;
                 }
             }
-            //end for loop
-            totalCount++;
-            $("#result").show();
-            $("#result").text("Guess # "+totalCount+": "+guess+" . Bulls: "+bullCount+", cows: "+cowCount);
+            //end repeat test.
+
+            //runs only if the repeat tester didn't set wrong to 1.
+            if (wrong === 0) {
+                if (guess === finalNum){
+                    totalCount++;
+                    $("#result").show();
+                    $("#result").text("You win! Guesses needed: " + totalCount);
+                }
+
+                else {
+                    for (var y=0; y<=3; y++) {
+                        if (guess[y] === finalNum[y]){
+                            bullCount++;
+                        }
+                        else if (finalNum.includes(guess[y])){
+                            cowCount++;
+                        }
+                    }
+                    //end for loop
+                    totalCount++;
+                    $("#result").show();
+                    $("#result").text("Guess # " + totalCount + ": " + guess + " . Bulls: " + bullCount + ", cows: "+cowCount);
+                    //reset counters
+                    bullCount = 0;
+                    cowCount = 0;
+                }
+                //end if loop
+            }
+            //end matching loop
+            }
+
+        function showNumber(event) {
+            event.preventDefault();
+            $("#showNumber").show();
+            $("#showNumber").text(finalNum);
         }
-        //end if loop
-
-    }
-
-    function showNumber(event) {
-        event.preventDefault();
-        $("#showNumber").show();
-        $("#showNumber").text(finalNum);
-    }
-    }});
+    });
