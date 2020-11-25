@@ -13,7 +13,7 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
     <select />
@@ -64,6 +64,7 @@
       <workItem from="1606089426160" duration="3026000" />
       <workItem from="1606096619560" duration="2687000" />
       <workItem from="1606182562038" duration="13042000" />
+      <workItem from="1606265323146" duration="1680000" />
     </task>
     <task id="LOCAL-00001" summary="Finalized logic.">
       <created>1606191266429</created>
@@ -95,6 +96,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finalized logic." />

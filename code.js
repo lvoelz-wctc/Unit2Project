@@ -1,37 +1,6 @@
 $(document).ready(
     function () {
-        $("#submit_number").click(submitNumber);
         $("#show_number").click(showNumber);
-        $("form").submit(submitNumber);
-
-        //validations
-        var myRules = {
-            guess:
-                {
-                    required: true,
-                    digits: true,
-                    minLength: 4,
-                    maxLength: 4
-                }
-        }
-
-        var myMessages = {
-            guess:
-                {
-                    required: "Enter a four digit number.",
-                    digits: "Entry must be a number.",
-                    minLength: "Must be exactly four digits.",
-                    maxLength: "Must be exactly four digits."
-                }
-        }
-
-        $("form").validate(
-            {
-                submitHandler: submitNumber,
-                rules: myRules,
-                messages: myMessages,
-            }
-        );
 
         //generate computer number
         var compNum = Math.floor((Math.random() * 10)).toString();
@@ -49,7 +18,7 @@ $(document).ready(
         var cowCount = 0; //different position only
         var totalCount = 0;
 
-        function submitNumber() {
+        function testGuessNumber() {
             //call validation
             var guess = $("#guess_number").val().toString();
             var wrong = 0;
@@ -99,4 +68,34 @@ $(document).ready(
             $("#showNumber").show();
             $("#showNumber").text(finalNum);
         }
+
+        //validations at the end now
+        var myRules = {
+            guess_number:
+                {
+                    required: true,
+                    digits: true,
+                    minLength: 4,
+                    maxLength: 4
+                }
+        }
+
+        var myMessages = {
+            guess_number:
+                {
+                    required: "Enter a four digit number.",
+                    digits: "Entry must be a number.",
+                    minLength: "Must be exactly four digits.",
+                    maxLength: "Must be exactly four digits."
+                }
+        }
+
+        $("form").validate(
+            {
+                submitHandler: testGuessNumber,
+                rules: myRules,
+                messages: myMessages
+            }
+        );
+
     });
