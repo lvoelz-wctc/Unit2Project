@@ -22,6 +22,8 @@
     <list default="true" id="fe65e505-b87c-40aa-af65-50cdddb2ba00" name="Default Changelist" comment="Validation Logic - Error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +67,8 @@
       <workItem from="1606096619560" duration="2687000" />
       <workItem from="1606182562038" duration="13042000" />
       <workItem from="1606265323146" duration="1680000" />
+      <workItem from="1606330749914" duration="1503000" />
+      <workItem from="1606355614999" duration="8005000" />
     </task>
     <task id="LOCAL-00001" summary="Finalized logic.">
       <created>1606191266429</created>

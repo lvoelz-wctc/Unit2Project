@@ -15,11 +15,12 @@ $(document).ready(
 
         var finalNum = compNum.toString();
         var bullCount = 0; //same position only
+        var bullImage = ""; //will store 🐂
         var cowCount = 0; //different position only
+        var cowImage = ""; //will store 🐄
         var totalCount = 0;
 
         function testGuessNumber() {
-            //call validation
             var guess = $("#guess_number").val().toString();
             var wrong = 0;
 
@@ -28,6 +29,7 @@ $(document).ready(
                 if (guess[z] === guess[z+1]){
                     $("#result").show();
                     $("#result").text("Guess may not contain duplicate numbers. Try again.");
+                    $("#resultImage").hide(); //hides the emojis if present from a previous guess.
                     wrong = 1;
                 }
             }
@@ -39,44 +41,52 @@ $(document).ready(
                     totalCount++;
                     $("#result").show();
                     $("#result").text("You win! Guesses needed: " + totalCount);
+                    $("#resultImage").text("Result: 🐂🐂🐂🐂");
                 }
 
                 else {
                     for (var y=0; y<=3; y++) {
                         if (guess[y] === finalNum[y]){
                             bullCount++;
+                            bullImage += "🐂";
                         }
                         else if (finalNum.includes(guess[y])){
                             cowCount++;
+                            cowImage += cowImage = "🐄";
                         }
                     }
                     //end for loop
                     totalCount++;
                     $("#result").show();
-                    $("#result").text("Guess # " + totalCount + ": " + guess + " . Bulls: " + bullCount + ", cows: "+cowCount);
+                    $("#result").text("Guess #" + totalCount + ": " + guess);
+                    $("#resultImage").text("Result: " + bullImage+cowImage);
+
                     //reset counters
                     bullCount = 0;
                     cowCount = 0;
+                    bullImage = "";
+                    cowImage = "";
                 }
                 //end if loop
             }
             //end matching loop
             }
 
+        //shows the computer's generated number
         function showNumber(event) {
             event.preventDefault();
             $("#showNumber").show();
             $("#showNumber").text(finalNum);
         }
 
-        //validations at the end now
+        //validations
         var myRules = {
             guess_number:
                 {
                     required: true,
                     digits: true,
-                    minLength: 4,
-                    maxLength: 4
+                    minlength: 4,
+                    maxlength: 4
                 }
         }
 
@@ -85,8 +95,8 @@ $(document).ready(
                 {
                     required: "Enter a four digit number.",
                     digits: "Entry must be a number.",
-                    minLength: "Must be exactly four digits.",
-                    maxLength: "Must be exactly four digits."
+                    minlength: "Must be exactly four digits.",
+                    maxlength: "Must be exactly four digits."
                 }
         }
 

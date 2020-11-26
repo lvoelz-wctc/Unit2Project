@@ -10,23 +10,40 @@
 </head>
 <body>
 
-<p>Enter a four-digit number with no duplicated digits. For example, "6329" is valid, while "6323" is not.</p>
-<form id="number_form">
-    <label for = "guess_number" class="address_form">Number</label>
-    <input type="text" class="guess" name="guess_number" id="guess_number" data-delivery="number"/>
-    <br>
-    <button id="submit_number">Submit Number</button>
-    <br>
-    <button id="show_number">Show Number</button>
-</form>
-
-<p id = "result"></p>
-<p id="showNumber"></p>
+<h1 id="title">Bulls and Cows</h1>
+<div class = "basic_class">
+    <p id = "intro">Enter a four-digit number with no duplicated digits. For example, "6329" is valid, while "6323" is not.
+    <br><br>
+     Click "Submit Number" to compare your number against the secret number. If your guess contains a digit that
+        matches one of the digits in the secret number and is in the same position, that is considered one bull.
+        <br><br>
+        If your guess contains a digit that matches one of the digits in the secret number but is in a different position,
+        that is considered one cow.
+        <br><br>
+        The results will show one 🐂 for each bull in your guess and one 🐄 for each cow in your guess. You can submit
+        a new guess as many times as you'd like.
+    </p>
+    <form id="number_form">
+        <label for = "guess_number" class="address_form">Number: </label>
+        <input type="text" class="guess" name="guess_number" id="guess_number" data-delivery="number"/>
+        <br>
+        <br>
+        <div class="btn-group">
+            <button class="button" id="submit_number">Submit Number</button>
+            <br>
+            <button class="button" id="show_number">Show Secret Number</button>
+        </div>
+    </form>
+    <br/>
+    <p id="result"></p>
+    <p id="resultImage"></p>
+    <p id="showNumber"></p>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
 <script src="code.js"></script>
 </body>
 </html>
