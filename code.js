@@ -26,7 +26,7 @@ $(document).ready(
 
             //make sure the guess doesn't have any repeated numbers
             for (var z = 0; z<=3; z++){
-                if (guess[z] === guess[z+1]){
+                if (guess[z] === guess[z+1] | guess[z] === guess[z+2] | guess[z] === guess[z+3] | guess[z] === guess[z+4]){
                     $("#result").show();
                     $("#result").text("Guess may not contain duplicate numbers. Try again.");
                     $("#resultImage").hide(); //hides the emojis if present from a previous guess.
