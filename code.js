@@ -26,10 +26,10 @@ $(document).ready(
 
             //make sure the guess doesn't have any repeated numbers
             for (var z = 0; z<=3; z++){
-                if (guess[z] === guess[z+1] | guess[z] === guess[z+2] | guess[z] === guess[z+3] | guess[z] === guess[z+4]){
+                if (guess[z] === guess[z+1] || guess[z] === guess[z+2] || guess[z] === guess[z+3] || guess[z] === guess[z+4]){
                     $("#result").show();
                     $("#result").text("Guess may not contain duplicate numbers. Try again.");
-                    $("#resultImage").hide(); //hides the emojis if present from a previous guess.
+                    $("#resultImage").hide(); //hides the emojis if present from a previous guess. Need to reshow this in later loops!
                     wrong = 1;
                 }
             }
@@ -41,6 +41,7 @@ $(document).ready(
                     totalCount++;
                     $("#result").show();
                     $("#result").text("You win! Guesses needed: " + totalCount);
+                    $("#resultImage").show();
                     $("#resultImage").text("Result: 🐂🐂🐂🐂");
                 }
 
@@ -59,6 +60,7 @@ $(document).ready(
                     totalCount++;
                     $("#result").show();
                     $("#result").text("Guess #" + totalCount + ": " + guess);
+                    $("#resultImage").show();
                     $("#resultImage").text("Result: " + bullImage+cowImage);
 
                     //reset counters
@@ -70,7 +72,7 @@ $(document).ready(
                 //end if loop
             }
             //end matching loop
-            }
+        }
 
         //shows the computer's generated number
         function showNumber(event) {
